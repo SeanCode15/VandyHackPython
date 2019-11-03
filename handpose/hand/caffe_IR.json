@@ -1,0 +1,5547 @@
+{
+    "node": [
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "3"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "shape": {
+                    "shape": {
+                        "dim": [
+                            {
+                                "size": "-1"
+                            },
+                            {
+                                "size": "1"
+                            },
+                            {
+                                "size": "1"
+                            },
+                            {
+                                "size": "3"
+                            }
+                        ]
+                    }
+                }
+            },
+            "name": "image",
+            "op": "DataInput"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "64"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "3",
+                            "64"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "image"
+            ],
+            "name": "conv1_1",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "64"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv1_1"
+            ],
+            "name": "relu1_1",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "64"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "64",
+                            "64"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu1_1"
+            ],
+            "name": "conv1_2",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "64"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv1_2"
+            ],
+            "name": "relu1_2",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "64"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "2",
+                            "2",
+                            "1"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "pooling_type": {
+                    "s": "TUFY"
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "2",
+                            "2",
+                            "1"
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "relu1_2"
+            ],
+            "name": "pool1_stage1",
+            "op": "Pool"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "64",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "pool1_stage1"
+            ],
+            "name": "conv2_1",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv2_1"
+            ],
+            "name": "relu2_1",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu2_1"
+            ],
+            "name": "conv2_2",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv2_2"
+            ],
+            "name": "relu2_2",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "2",
+                            "2",
+                            "1"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "pooling_type": {
+                    "s": "TUFY"
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "2",
+                            "2",
+                            "1"
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "relu2_2"
+            ],
+            "name": "pool2_stage1",
+            "op": "Pool"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "256"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "128",
+                            "256"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "pool2_stage1"
+            ],
+            "name": "conv3_1",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "256"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv3_1"
+            ],
+            "name": "relu3_1",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "256"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "256",
+                            "256"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu3_1"
+            ],
+            "name": "conv3_2",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "256"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv3_2"
+            ],
+            "name": "relu3_2",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "256"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "256",
+                            "256"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu3_2"
+            ],
+            "name": "conv3_3",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "256"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv3_3"
+            ],
+            "name": "relu3_3",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "256"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "256",
+                            "256"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu3_3"
+            ],
+            "name": "conv3_4",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "256"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv3_4"
+            ],
+            "name": "relu3_4",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "256"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "2",
+                            "2",
+                            "1"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "pooling_type": {
+                    "s": "TUFY"
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "2",
+                            "2",
+                            "1"
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "relu3_4"
+            ],
+            "name": "pool3_stage1",
+            "op": "Pool"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "256",
+                            "512"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "pool3_stage1"
+            ],
+            "name": "conv4_1",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv4_1"
+            ],
+            "name": "relu4_1",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "512",
+                            "512"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu4_1"
+            ],
+            "name": "conv4_2",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv4_2"
+            ],
+            "name": "relu4_2",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "512",
+                            "512"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu4_2"
+            ],
+            "name": "conv4_3",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv4_3"
+            ],
+            "name": "relu4_3",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "512",
+                            "512"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu4_3"
+            ],
+            "name": "conv4_4",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv4_4"
+            ],
+            "name": "relu4_4",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "512",
+                            "512"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu4_4"
+            ],
+            "name": "conv5_1",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv5_1"
+            ],
+            "name": "relu5_1",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "512",
+                            "512"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu5_1"
+            ],
+            "name": "conv5_2",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv5_2"
+            ],
+            "name": "relu5_2",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "3",
+                            "3",
+                            "512",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "1",
+                            "1",
+                            "0",
+                            "0",
+                            "1",
+                            "1",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu5_2"
+            ],
+            "name": "conv5_3_CPM",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv5_3_CPM"
+            ],
+            "name": "relu5_4_stage1_3",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "128",
+                            "512"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu5_4_stage1_3"
+            ],
+            "name": "conv6_1_CPM",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "512"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "conv6_1_CPM"
+            ],
+            "name": "relu6_4_stage1_1",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "22"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "512",
+                            "22"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "relu6_4_stage1_1"
+            ],
+            "name": "conv6_2_CPM",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "150"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "axis": {
+                    "i": "3"
+                }
+            },
+            "input": [
+                "conv6_2_CPM",
+                "relu5_4_stage1_3"
+            ],
+            "name": "concat_stage2",
+            "op": "Concat"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "150",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "concat_stage2"
+            ],
+            "name": "Mconv1_stage2",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv1_stage2"
+            ],
+            "name": "Mrelu1_2_stage2_1",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_2_stage2_1"
+            ],
+            "name": "Mconv2_stage2",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv2_stage2"
+            ],
+            "name": "Mrelu1_3_stage2_2",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_3_stage2_2"
+            ],
+            "name": "Mconv3_stage2",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv3_stage2"
+            ],
+            "name": "Mrelu1_4_stage2_3",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_4_stage2_3"
+            ],
+            "name": "Mconv4_stage2",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv4_stage2"
+            ],
+            "name": "Mrelu1_5_stage2_4",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_5_stage2_4"
+            ],
+            "name": "Mconv5_stage2",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv5_stage2"
+            ],
+            "name": "Mrelu1_6_stage2_5",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_6_stage2_5"
+            ],
+            "name": "Mconv6_stage2",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv6_stage2"
+            ],
+            "name": "Mrelu1_7_stage2_6",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "22"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "128",
+                            "22"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_7_stage2_6"
+            ],
+            "name": "Mconv7_stage2",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "150"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "axis": {
+                    "i": "3"
+                }
+            },
+            "input": [
+                "Mconv7_stage2",
+                "relu5_4_stage1_3"
+            ],
+            "name": "concat_stage3",
+            "op": "Concat"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "150",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "concat_stage3"
+            ],
+            "name": "Mconv1_stage3",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv1_stage3"
+            ],
+            "name": "Mrelu1_2_stage3_1",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_2_stage3_1"
+            ],
+            "name": "Mconv2_stage3",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv2_stage3"
+            ],
+            "name": "Mrelu1_3_stage3_2",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_3_stage3_2"
+            ],
+            "name": "Mconv3_stage3",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv3_stage3"
+            ],
+            "name": "Mrelu1_4_stage3_3",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_4_stage3_3"
+            ],
+            "name": "Mconv4_stage3",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv4_stage3"
+            ],
+            "name": "Mrelu1_5_stage3_4",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_5_stage3_4"
+            ],
+            "name": "Mconv5_stage3",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv5_stage3"
+            ],
+            "name": "Mrelu1_6_stage3_5",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_6_stage3_5"
+            ],
+            "name": "Mconv6_stage3",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv6_stage3"
+            ],
+            "name": "Mrelu1_7_stage3_6",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "22"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "128",
+                            "22"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_7_stage3_6"
+            ],
+            "name": "Mconv7_stage3",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "150"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "axis": {
+                    "i": "3"
+                }
+            },
+            "input": [
+                "Mconv7_stage3",
+                "relu5_4_stage1_3"
+            ],
+            "name": "concat_stage4",
+            "op": "Concat"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "150",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "concat_stage4"
+            ],
+            "name": "Mconv1_stage4",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv1_stage4"
+            ],
+            "name": "Mrelu1_2_stage4_1",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_2_stage4_1"
+            ],
+            "name": "Mconv2_stage4",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv2_stage4"
+            ],
+            "name": "Mrelu1_3_stage4_2",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_3_stage4_2"
+            ],
+            "name": "Mconv3_stage4",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv3_stage4"
+            ],
+            "name": "Mrelu1_4_stage4_3",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_4_stage4_3"
+            ],
+            "name": "Mconv4_stage4",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv4_stage4"
+            ],
+            "name": "Mrelu1_5_stage4_4",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_5_stage4_4"
+            ],
+            "name": "Mconv5_stage4",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv5_stage4"
+            ],
+            "name": "Mrelu1_6_stage4_5",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_6_stage4_5"
+            ],
+            "name": "Mconv6_stage4",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv6_stage4"
+            ],
+            "name": "Mrelu1_7_stage4_6",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "22"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "128",
+                            "22"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_7_stage4_6"
+            ],
+            "name": "Mconv7_stage4",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "150"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "axis": {
+                    "i": "3"
+                }
+            },
+            "input": [
+                "Mconv7_stage4",
+                "relu5_4_stage1_3"
+            ],
+            "name": "concat_stage5",
+            "op": "Concat"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "150",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "concat_stage5"
+            ],
+            "name": "Mconv1_stage5",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv1_stage5"
+            ],
+            "name": "Mrelu1_2_stage5_1",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_2_stage5_1"
+            ],
+            "name": "Mconv2_stage5",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv2_stage5"
+            ],
+            "name": "Mrelu1_3_stage5_2",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_3_stage5_2"
+            ],
+            "name": "Mconv3_stage5",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv3_stage5"
+            ],
+            "name": "Mrelu1_4_stage5_3",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_4_stage5_3"
+            ],
+            "name": "Mconv4_stage5",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv4_stage5"
+            ],
+            "name": "Mrelu1_5_stage5_4",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_5_stage5_4"
+            ],
+            "name": "Mconv5_stage5",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv5_stage5"
+            ],
+            "name": "Mrelu1_6_stage5_5",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_6_stage5_5"
+            ],
+            "name": "Mconv6_stage5",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv6_stage5"
+            ],
+            "name": "Mrelu1_7_stage5_6",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "22"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "128",
+                            "22"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_7_stage5_6"
+            ],
+            "name": "Mconv7_stage5",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "150"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "axis": {
+                    "i": "3"
+                }
+            },
+            "input": [
+                "Mconv7_stage5",
+                "relu5_4_stage1_3"
+            ],
+            "name": "concat_stage6",
+            "op": "Concat"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "150",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "concat_stage6"
+            ],
+            "name": "Mconv1_stage6",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv1_stage6"
+            ],
+            "name": "Mrelu1_2_stage6_1",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_2_stage6_1"
+            ],
+            "name": "Mconv2_stage6",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv2_stage6"
+            ],
+            "name": "Mrelu1_3_stage6_2",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_3_stage6_2"
+            ],
+            "name": "Mconv3_stage6",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv3_stage6"
+            ],
+            "name": "Mrelu1_4_stage6_3",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_4_stage6_3"
+            ],
+            "name": "Mconv4_stage6",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv4_stage6"
+            ],
+            "name": "Mrelu1_5_stage6_4",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "7",
+                            "7",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "3",
+                            "3",
+                            "0",
+                            "0",
+                            "3",
+                            "3",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_5_stage6_4"
+            ],
+            "name": "Mconv5_stage6",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv5_stage6"
+            ],
+            "name": "Mrelu1_6_stage6_5",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "128",
+                            "128"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_6_stage6_5"
+            ],
+            "name": "Mconv6_stage6",
+            "op": "Conv"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "128"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "input": [
+                "Mconv6_stage6"
+            ],
+            "name": "Mrelu1_7_stage6_6",
+            "op": "Relu"
+        },
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "1"
+                                    },
+                                    {
+                                        "size": "22"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "group": {
+                    "i": "1"
+                },
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "128",
+                            "22"
+                        ]
+                    }
+                },
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1",
+                            "1",
+                            "1",
+                            "1"
+                        ]
+                    }
+                },
+                "use_bias": {
+                    "b": true
+                }
+            },
+            "input": [
+                "Mrelu1_7_stage6_6"
+            ],
+            "name": "Mconv7_stage6",
+            "op": "Conv"
+        }
+    ]
+}
